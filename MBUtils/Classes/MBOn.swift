@@ -8,7 +8,7 @@
 
 import Foundation
 
-class on {
+class MBOn {
     static let STANDARD_ANIMATION_TIME = Float(0.3)
     
     typealias Work = () -> ()
