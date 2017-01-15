@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MBUtils_Example' do
+  pod 'MBUtils', :path => '../'
+
+  target 'MBUtils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
