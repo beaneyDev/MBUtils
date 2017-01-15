@@ -8,13 +8,13 @@
 
 import Foundation
 
-class MBOn {
+open class MBOn {
     static let STANDARD_ANIMATION_TIME = Float(0.3)
     
-    typealias Work = () -> ()
+    public typealias Work = () -> ()
     
     /// Run sth. on the main thread - avoid dispatch overhead if already tehre
-    static func main(_ task: @escaping Work) {
+    open static func main(_ task: @escaping Work) {
         if Thread.isMainThread {
             task()
         } else {
@@ -23,7 +23,7 @@ class MBOn {
     }
     
     /// Run sth. on a background thread
-    static func bg(_ task: @escaping Work) {
+    open static func bg(_ task: @escaping Work) {
         DispatchQueue.global(qos: .default).async(execute: task)
     }
 }
